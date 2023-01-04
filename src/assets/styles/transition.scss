@@ -1,0 +1,90 @@
+// vue global transition css define
+/* fade */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter-from,
+.fade-leave-active {
+  opacity: 0;
+}
+
+/* fade-transform AppMain*/
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all 0.3s;
+}
+
+.fade-transform-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.fade-transform-active {
+  position: absolute;
+}
+
+/* breadcrumb transition */
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all 0.1s;
+}
+
+.breadcrumb-enter-from,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}
+
+
+/**
+* 如果是动画效果，不止一个状态改变
+* 就只需设置动态jike
+* */
+.run-enter-active {
+  animation: run-scale 1s linear 0s;
+}
+
+// 离开的时候设置成相反哒
+.run-leave-active {
+  animation: run-scale 1s linear 0s reverse;
+}
+
+@keyframes run-scale {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.right-enter,
+.right-leave-to {
+  transform: translate3d(100%, 0, 0)
+}
+
+.right-leave,
+.right-enter-to {
+  transform: translate3d(0, 0, 0)
+}
+
+.right-enter-active,
+.right-leave-active {
+  transition: all .2s
+}
