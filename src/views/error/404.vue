@@ -1,6 +1,6 @@
 <template>
     <div>
-        管理员编辑
+        <h1>404 not fount</h1>
     </div>
 </template>
 

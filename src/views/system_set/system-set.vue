@@ -1,6 +1,6 @@
 <template>
     <div>
-        权限管理
+        系统设置
     </div>
 </template>
 
