@@ -2,6 +2,7 @@
   <div>
     111
     <svg-icon name="account"></svg-icon>
+    <el-button type="success"></el-button>
   </div>
 </template>
 
