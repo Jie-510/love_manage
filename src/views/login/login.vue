@@ -22,6 +22,7 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue';
+import { loginReq } from '@/api/user';
 
 interface FormInt {
     account: string,
@@ -34,9 +35,11 @@ const form: FormInt = reactive({
 })
 
 // 登录按钮
-const submitForm = (form: FormInt): void => {
-    console.log(form);
-
+const submitForm = async (form: FormInt): Promise<void> => {
+    const userData = await loginReq(form)
+    if (userData.data.token) {
+        localStorage.setItem('token', userData.data.token)
+    }
 }
 
 </script>
