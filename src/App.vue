@@ -1,8 +1,6 @@
 <template>
-  <div>
-    111
-    <svg-icon name="account"></svg-icon>
-    <el-button type="success"></el-button>
+  <div class="app">
+    <router-view></router-view>
   </div>
 </template>
 
@@ -11,5 +9,8 @@
 </script>
 
 <style lang="scss" scoped>
-
+.app {
+  width: 100%;
+  height: 100%;
+}
 </style>
